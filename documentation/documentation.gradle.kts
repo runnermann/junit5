@@ -30,6 +30,10 @@ javaLibrary {
 	testJavaVersion = JavaVersion.VERSION_1_8
 }
 
+repositories {
+	maven(url = "https://jitpack.io")
+}
+
 dependencies {
 	asciidoctor("org.jruby:jruby-complete:${Versions.jruby}")
 
@@ -47,6 +51,7 @@ dependencies {
 
 	testRuntimeOnly("org.apache.logging.log4j:log4j-core:${Versions.log4j}")
 	testRuntimeOnly("org.apache.logging.log4j:log4j-jul:${Versions.log4j}")
+	testRuntimeOnly("com.github.micromata.raktajino:raktajino-tracer:0.0.2")
 
 	// for ApiReportGenerator
 	testImplementation("io.github.classgraph:classgraph:${Versions.classgraph}")
